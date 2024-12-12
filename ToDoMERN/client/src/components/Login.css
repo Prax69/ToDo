@@ -1,0 +1,33 @@
+/* Center the form container on the page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Form styling */
+.login-form {
+  width: 100%;
+  max-width: 400px; /* Limit form width */
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 16px;
+}
+
+.text-danger {
+  font-size: 0.85rem;
+}
