@@ -17,6 +17,16 @@ app.use(express.json());
 app.use("/api/", apiRoute);
 app.use("/api/", AuthMiddleware, apiProtected);
 
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    status: 200,
+    topic: "health check",
+    data: "Ok",
+    uptime: process.uptime(),
+    date: new Date(),
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
