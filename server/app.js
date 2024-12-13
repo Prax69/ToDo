@@ -11,7 +11,13 @@ mongoose.connect(DB_CONNECT, { useNewUrlParser: true });
 
 const port = 3000;
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://to-do-931i.vercel.app"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api/", apiRoute);
